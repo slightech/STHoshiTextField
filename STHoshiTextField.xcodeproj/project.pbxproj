@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9E2A90C1CF5AD6200015FB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E2A90B1CF5AD6200015FB4 /* main.m */; };
+		A9E2A90F1CF5AD6200015FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E2A90E1CF5AD6200015FB4 /* AppDelegate.m */; };
+		A9E2A9121CF5AD6200015FB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E2A9111CF5AD6200015FB4 /* ViewController.m */; };
+		A9E2A9151CF5AD6200015FB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E2A9131CF5AD6200015FB4 /* Main.storyboard */; };
+		A9E2A9171CF5AD6200015FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E2A9161CF5AD6200015FB4 /* Assets.xcassets */; };
+		A9E2A91A1CF5AD6200015FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E2A9181CF5AD6200015FB4 /* LaunchScreen.storyboard */; };
+		A9E2A9261CF5AD7C00015FB4 /* STHoshiTextField.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9E2A9251CF5AD7C00015FB4 /* STHoshiTextField.h */; };
+		A9E2A9281CF5AD7C00015FB4 /* STHoshiTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E2A9271CF5AD7C00015FB4 /* STHoshiTextField.m */; };
+		A9E2A92C1CF5AD8C00015FB4 /* libSTHoshiTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E2A9231CF5AD7C00015FB4 /* libSTHoshiTextField.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9E2A9211CF5AD7C00015FB4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A9E2A9261CF5AD7C00015FB4 /* STHoshiTextField.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A9E2A9081CF5AD6200015FB4 /* STHoshiTextFieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STHoshiTextFieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E2A90B1CF5AD6200015FB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9E2A90D1CF5AD6200015FB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A9E2A90E1CF5AD6200015FB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A9E2A9101CF5AD6200015FB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A9E2A9111CF5AD6200015FB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A9E2A9141CF5AD6200015FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9E2A9161CF5AD6200015FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9E2A9191CF5AD6200015FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9E2A91B1CF5AD6200015FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9E2A9231CF5AD7C00015FB4 /* libSTHoshiTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTHoshiTextField.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E2A9251CF5AD7C00015FB4 /* STHoshiTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STHoshiTextField.h; sourceTree = "<group>"; };
+		A9E2A9271CF5AD7C00015FB4 /* STHoshiTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STHoshiTextField.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9E2A9051CF5AD6200015FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9E2A92C1CF5AD8C00015FB4 /* libSTHoshiTextField.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9E2A9201CF5AD7C00015FB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9E2A8E11CF5AD3300015FB4 = {
+			isa = PBXGroup;
+			children = (
+				A9E2A9091CF5AD6200015FB4 /* STHoshiTextFieldDemo */,
+				A9E2A9241CF5AD7C00015FB4 /* STHoshiTextField */,
+				A9E2A8EB1CF5AD3300015FB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9E2A8EB1CF5AD3300015FB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9E2A9081CF5AD6200015FB4 /* STHoshiTextFieldDemo.app */,
+				A9E2A9231CF5AD7C00015FB4 /* libSTHoshiTextField.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9E2A9091CF5AD6200015FB4 /* STHoshiTextFieldDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A9E2A90D1CF5AD6200015FB4 /* AppDelegate.h */,
+				A9E2A90E1CF5AD6200015FB4 /* AppDelegate.m */,
+				A9E2A9101CF5AD6200015FB4 /* ViewController.h */,
+				A9E2A9111CF5AD6200015FB4 /* ViewController.m */,
+				A9E2A9131CF5AD6200015FB4 /* Main.storyboard */,
+				A9E2A9161CF5AD6200015FB4 /* Assets.xcassets */,
+				A9E2A9181CF5AD6200015FB4 /* LaunchScreen.storyboard */,
+				A9E2A91B1CF5AD6200015FB4 /* Info.plist */,
+				A9E2A90A1CF5AD6200015FB4 /* Supporting Files */,
+			);
+			path = STHoshiTextFieldDemo;
+			sourceTree = "<group>";
+		};
+		A9E2A90A1CF5AD6200015FB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9E2A90B1CF5AD6200015FB4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9E2A9241CF5AD7C00015FB4 /* STHoshiTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A9E2A9251CF5AD7C00015FB4 /* STHoshiTextField.h */,
+				A9E2A9271CF5AD7C00015FB4 /* STHoshiTextField.m */,
+			);
+			path = STHoshiTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9E2A9071CF5AD6200015FB4 /* STHoshiTextFieldDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E2A91C1CF5AD6200015FB4 /* Build configuration list for PBXNativeTarget "STHoshiTextFieldDemo" */;
+			buildPhases = (
+				A9E2A9041CF5AD6200015FB4 /* Sources */,
+				A9E2A9051CF5AD6200015FB4 /* Frameworks */,
+				A9E2A9061CF5AD6200015FB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STHoshiTextFieldDemo;
+			productName = STHoshiTextFieldDemo;
+			productReference = A9E2A9081CF5AD6200015FB4 /* STHoshiTextFieldDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9E2A9221CF5AD7C00015FB4 /* STHoshiTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9E2A9291CF5AD7C00015FB4 /* Build configuration list for PBXNativeTarget "STHoshiTextField" */;
+			buildPhases = (
+				A9E2A91F1CF5AD7C00015FB4 /* Sources */,
+				A9E2A9201CF5AD7C00015FB4 /* Frameworks */,
+				A9E2A9211CF5AD7C00015FB4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STHoshiTextField;
+			productName = STHoshiTextField;
+			productReference = A9E2A9231CF5AD7C00015FB4 /* libSTHoshiTextField.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9E2A8E21CF5AD3300015FB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = slightech;
+				TargetAttributes = {
+					A9E2A9071CF5AD6200015FB4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A9E2A9221CF5AD7C00015FB4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A9E2A8E51CF5AD3300015FB4 /* Build configuration list for PBXProject "STHoshiTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9E2A8E11CF5AD3300015FB4;
+			productRefGroup = A9E2A8EB1CF5AD3300015FB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9E2A9071CF5AD6200015FB4 /* STHoshiTextFieldDemo */,
+				A9E2A9221CF5AD7C00015FB4 /* STHoshiTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9E2A9061CF5AD6200015FB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9E2A91A1CF5AD6200015FB4 /* LaunchScreen.storyboard in Resources */,
+				A9E2A9171CF5AD6200015FB4 /* Assets.xcassets in Resources */,
+				A9E2A9151CF5AD6200015FB4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9E2A9041CF5AD6200015FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9E2A9121CF5AD6200015FB4 /* ViewController.m in Sources */,
+				A9E2A90F1CF5AD6200015FB4 /* AppDelegate.m in Sources */,
+				A9E2A90C1CF5AD6200015FB4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9E2A91F1CF5AD7C00015FB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9E2A9281CF5AD7C00015FB4 /* STHoshiTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A9E2A9131CF5AD6200015FB4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9E2A9141CF5AD6200015FB4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A9E2A9181CF5AD6200015FB4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9E2A9191CF5AD6200015FB4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9E2A8FF1CF5AD3300015FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9E2A9001CF5AD3300015FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9E2A91D1CF5AD6200015FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = STHoshiTextFieldDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.slightech.STHoshiTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9E2A91E1CF5AD6200015FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = STHoshiTextFieldDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.slightech.STHoshiTextFieldDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A9E2A92A1CF5AD7C00015FB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A9E2A92B1CF5AD7C00015FB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9E2A8E51CF5AD3300015FB4 /* Build configuration list for PBXProject "STHoshiTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E2A8FF1CF5AD3300015FB4 /* Debug */,
+				A9E2A9001CF5AD3300015FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9E2A91C1CF5AD6200015FB4 /* Build configuration list for PBXNativeTarget "STHoshiTextFieldDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E2A91D1CF5AD6200015FB4 /* Debug */,
+				A9E2A91E1CF5AD6200015FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9E2A9291CF5AD7C00015FB4 /* Build configuration list for PBXNativeTarget "STHoshiTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E2A92A1CF5AD7C00015FB4 /* Debug */,
+				A9E2A92B1CF5AD7C00015FB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9E2A8E21CF5AD3300015FB4 /* Project object */;
+}
