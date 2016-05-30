@@ -24,8 +24,6 @@
     
 }
 
-@property (nonatomic, assign) CGFloat active;
-
 @property (nonatomic, assign) CGFloat inactive;
 
 @property (nonatomic, assign) CGPoint placeholderInsets;
@@ -75,7 +73,7 @@
 }
 
 - (void)commitIn {
-    _active = 2;
+    _active = 1;
     _inactive = 0.5;
     _placeholderInsets = CGPointMake(0, 6);
     _textFieldInsets = CGPointMake(0, 15);
@@ -89,6 +87,11 @@
     if (self.placeholder) {
         [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
     }
+}
+
+- (void)setActive:(CGFloat)active {
+    _active = active;
+    [self updateBorder];
 }
 
 - (void)setBounds:(CGRect)bounds {

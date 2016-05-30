@@ -10,6 +10,7 @@
 
 @interface STHoshiTextField : UITextField
 
+@property (nonatomic, assign) IBInspectable CGFloat active;
 // 底部横线高亮颜色
 @property (nonatomic, strong) IBInspectable UIColor *borderInactiveColor;
 // 底部横线普通颜色
