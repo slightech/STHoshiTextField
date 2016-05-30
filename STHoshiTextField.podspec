@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "STHoshiTextField"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "STHoshiTextField for ios"
   s.homepage     = 'https://github.com/slightech/STHoshiTextField'
   s.author       = { 'robinge' => 'robinge@slightech.com' }
