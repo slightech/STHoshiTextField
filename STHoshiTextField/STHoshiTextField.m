@@ -108,14 +108,17 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview != nil) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidEndEditing) name:UITextFieldTextDidEndEditingNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidBeginEditing) name:UITextFieldTextDidBeginEditingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
     } else {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if (object != self) {
+        return;
+    }
     if ([keyPath isEqualToString:@"borderActiveColor"] || [keyPath isEqualToString:@"borderInactiveColor"]) {
         [self updateBorder];
     } else if ([keyPath isEqualToString:@"placeholder"] ||
@@ -184,12 +187,16 @@
     _activeBorderLayer.frame = [self rectForBorder:_active isFilled:true];
 }
 
-- (void)textFieldDidBeginEditing {
-    [self animateViewsForTextEntry];
+- (void)textFieldDidBeginEditing:(NSNotification *)notification {
+    if (notification.object == self) {
+        [self animateViewsForTextEntry];
+    }
 }
 
-- (void)textFieldDidEndEditing {
-    [self animateViewsForTextDisplay];
+- (void)textFieldDidEndEditing:(NSNotification *)notification {
+    if (notification.object == self) {
+        [self animateViewsForTextDisplay];
+    }
 }
 
 - (void)prepareForInterfaceBuilder {
