@@ -72,13 +72,6 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self removeObserver:self forKeyPath:@"bounds"];
-    [self removeObserver:self forKeyPath:@"text"];
-    [self removeObserver:self forKeyPath:@"borderActiveColor"];
-    [self removeObserver:self forKeyPath:@"borderInactiveColor"];
-    [self removeObserver:self forKeyPath:@"placeholder"];
-    [self removeObserver:self forKeyPath:@"placeholderColor"];
-    [self removeObserver:self forKeyPath:@"placeholderFontScale"];
 }
 
 - (void)commitIn {
@@ -93,17 +86,53 @@
     _inactiveBorderLayer = [[CALayer alloc] init];
     _placeholderLabel = [[UILabel alloc] init];
     
-    [self addObserver:self forKeyPath:@"bounds" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:@"borderActiveColor" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:@"borderInactiveColor" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:@"placeholder" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:@"placeholderColor" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:@"placeholderFontScale" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    
     if (self.placeholder) {
         [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
     }
+}
+
+- (void)setBounds:(CGRect)bounds {
+    [super setBounds:bounds];
+    [self updateBorder];
+    [self updatePlaceholder];
+}
+
+- (void)setText:(NSString *)text {
+    [super setText:text];
+    
+    if (!text && [text isNotEmpty]) {
+        [self animateViewsForTextEntry];
+    } else {
+        [self animateViewsForTextDisplay];
+    }
+}
+
+- (void)setPlaceholder:(NSString *)placeholder {
+    [super setPlaceholder:placeholder];
+    [self updatePlaceholder];
+    if (placeholder) {
+        [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
+    }
+}
+
+- (void)setBorderActiveColor:(UIColor *)borderActiveColor {
+    _borderActiveColor = borderActiveColor;
+    [self updateBorder];
+}
+
+- (void)setBorderInactiveColor:(UIColor *)borderInactiveColor {
+    _borderInactiveColor = borderInactiveColor;
+    [self updateBorder];
+}
+
+- (void)setPlaceholderColor:(UIColor *)placeholderColor {
+    placeholderColor = placeholderColor;
+    [self updatePlaceholder];
+}
+
+- (void)setPlaceholderFontScale:(CGFloat)placeholderFontScale {
+    _placeholderFontScale = placeholderFontScale;
+    [self updatePlaceholder];
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
@@ -112,33 +141,6 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
     } else {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
-    }
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    if (object != self) {
-        return;
-    }
-    if ([keyPath isEqualToString:@"borderActiveColor"] || [keyPath isEqualToString:@"borderInactiveColor"]) {
-        [self updateBorder];
-    } else if ([keyPath isEqualToString:@"placeholder"] ||
-               [keyPath isEqualToString:@"placeholderColor"] ||
-               [keyPath isEqualToString:@"placeholderFontScale"]) {
-        [self updatePlaceholder];
-        if ([keyPath isEqualToString:@"placeholder"]) {
-            if (self.placeholder) {
-                [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
-            }
-        }
-    } else if ([keyPath isEqualToString:@"bounds"]) {
-        [self updateBorder];
-        [self updatePlaceholder];
-    } else if ([keyPath isEqualToString:@"text"]) {
-        if ([change objectForKey:@"new"] != nil && [[change objectForKey:@"new"] isNotEmpty]) {
-            [self animateViewsForTextEntry];
-        } else {
-            [self animateViewsForTextDisplay];
-        }
     }
 }
 

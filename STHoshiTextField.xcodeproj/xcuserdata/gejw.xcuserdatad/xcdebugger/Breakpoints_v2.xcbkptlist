@@ -63,7 +63,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "-commitIn"
+            landmarkName = "-setText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -79,7 +79,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "-commitIn"
+            landmarkName = "-setBounds:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "-willMoveToSuperview:"
+            landmarkName = "-setPlaceholder:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,7 +137,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "-drawRect:"
+            landmarkName = "-willMoveToSuperview:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
