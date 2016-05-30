@@ -70,6 +70,17 @@
     return self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self removeObserver:self forKeyPath:@"bounds"];
+    [self removeObserver:self forKeyPath:@"text"];
+    [self removeObserver:self forKeyPath:@"borderActiveColor"];
+    [self removeObserver:self forKeyPath:@"borderInactiveColor"];
+    [self removeObserver:self forKeyPath:@"placeholder"];
+    [self removeObserver:self forKeyPath:@"placeholderColor"];
+    [self removeObserver:self forKeyPath:@"placeholderFontScale"];
+}
+
 - (void)commitIn {
     _active = 2;
     _inactive = 0.5;
@@ -89,12 +100,16 @@
     [self addObserver:self forKeyPath:@"placeholder" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     [self addObserver:self forKeyPath:@"placeholderColor" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     [self addObserver:self forKeyPath:@"placeholderFontScale" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    
+    if (self.placeholder) {
+        [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
+    }
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview != nil) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidEndEditing) name:UITextFieldTextDidEndEditingNotification object:self];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidBeginEditing) name:UITextFieldTextDidBeginEditingNotification object:self];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidEndEditing) name:UITextFieldTextDidEndEditingNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidBeginEditing) name:UITextFieldTextDidBeginEditingNotification object:nil];
     } else {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
@@ -108,7 +123,9 @@
                [keyPath isEqualToString:@"placeholderFontScale"]) {
         [self updatePlaceholder];
         if ([keyPath isEqualToString:@"placeholder"]) {
-            [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
+            if (self.placeholder) {
+                [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: [UIColor clearColor]}]];
+            }
         }
     } else if ([keyPath isEqualToString:@"bounds"]) {
         [self updateBorder];
