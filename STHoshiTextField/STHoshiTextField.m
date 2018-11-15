@@ -129,7 +129,7 @@
 }
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
-    placeholderColor = placeholderColor;
+    _placeholderColor = placeholderColor;
     [self updatePlaceholder];
 }
 
